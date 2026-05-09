@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test')
 
-test.('autosuggestion fix', async ({ page }) => {
+test('autosuggestion fix', async ({ page }) => {
 
     await page.goto('https://jqueryui.com/datepicker/')
 
