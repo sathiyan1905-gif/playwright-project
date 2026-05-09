@@ -1,0 +1,35 @@
+const { test, expect } = require('@playwright/test') 
+
+
+test('button', async ({ page }) => {
+
+    await page.goto('https://www.qaplayground.com/practice/buttons')
+    //const button1 = await page.locator('#btn-goto-home')
+    //await button1.click() 
+    //await expect(page.getByText('Go To Home')).toBeVisible()
+    //const button2 = await page.locator('#btn-find-location')
+    //await expect(button2).toBeVisible()
+    //await button2.click()
+    //await expect(button2).toBeEnabled()
+    //const button3 = await page.locator('#btn-click-hold')
+    //await expect(page.getByText('Click and Hold!')).toBeVisible()
+    //await button3.hover()
+    //await page.mouse.down()
+    //await expect(page.getByText('Keep Holding...')).toBeVisible()
+    //await page.waitForTimeout(3000)
+    //await page.mouse.up()
+    //await expect(page.getByText('Hold Complete!')).toBeVisible()
+    //const button4 = await page.locator('#btn-double-click')
+    //await expect(page.getByText('Double Click Me')).toBeVisible()
+    //await button4.dblclick()
+    //await expect(page.getByText('You Double-clicked on button!')).toBeVisible()
+    const button5 = await page.getByText('Right Click Me')
+    await expect(button5).toBeVisible()
+    await expect(button5).toBeEnabled()
+    await expect(button5).toHaveText('Right Click Me')
+    await expect(page.getByText('No action performed yet.')).toBeVisible()
+    await button5.click({button: 'right'})
+    await expect(page.getByText('You Right-clicked on button!')).toBeVisible()
+
+
+9})
