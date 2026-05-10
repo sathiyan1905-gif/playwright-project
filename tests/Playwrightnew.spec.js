@@ -41,4 +41,4 @@ test('sample', async ({ page }) => {
   await expect(TC03).toHaveValue('This text is readonly')
   console.log('Readonly value:', await TC03.inputValue())
   await expect(page.getByText('Scenario 6: Check text is readonly')).toBeVisible()
-})
+}) 
