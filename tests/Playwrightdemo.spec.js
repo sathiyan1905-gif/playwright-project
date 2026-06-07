@@ -151,11 +151,15 @@ await page.keyboard.press('Control+A')
 await page.keyboard.press('Control+C')
 await page.keyboard.press('Tab')
 await page.keyboard.press('Control+V')
+await expect(page.locator('#field2')).toBeEditable()
 await expect(page.locator('#field2')).toHaveValue('Hello World!')
 
 await page.locator("div[id='draggable'] p").hover()
 await page.mouse.down()
 await page.locator('#droppable').hover()
 await page.mouse.up()
+
+
+
 
 })
